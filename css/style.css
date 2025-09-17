@@ -1,277 +1,233 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #0d1b2a;
-    --secondary-color: #1b263b;
-    --accent-color: #e71d36;
-    --text-color: #ffffff;
-    --light-gray: #f4f4f4;
-    --dark-gray: #333333;
-}
-
+/* Global Styles */
 body {
-    font-family: "proxima-nova", sans-serif;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--primary-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "ff-good-headline-web-pro-condensed", sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
     padding: 0 20px;
+}
+
+a {
+    color: #c5143e;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
 }
 
 /* Header */
 header {
-    background-color: transparent;
+    background: #1a1a1a;
+    color: #fff;
     padding: 1rem 0;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
+    top: 0;
     z-index: 1000;
-    transition: background-color 0.3s ease;
+    transition: top 0.3s;
 }
 
-header.scrolled {
-    background-color: var(--secondary-color);
-}
-
-nav {
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin: 0 auto;
 }
 
-.logo {
-    width: 150px;
+header .logo img {
+    height: 50px;
 }
 
-.nav-links {
+header nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
 }
 
-.nav-links li {
+header nav ul li {
     margin-left: 20px;
 }
 
-.nav-links a {
-    color: var(--text-color);
+header nav a {
+    color: #fff;
     font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 5px;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--accent-color);
-    transition: width 0.3s ease;
+.donate-btn {
+    background: #c5143e;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
-}
-
+/* Hamburger Menu for Mobile */
 .hamburger {
     display: none;
     cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.hamburger div {
+.hamburger .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--text-color);
-    margin: 5px;
-    transition: all 0.3s ease;
+    background-color: white;
+}
+
+/* Main Content */
+main {
+    padding-top: 80px; /* Adjust for fixed header */
 }
 
 /* Hero Section */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: url('../Turning Point USA_files/KIRKS.jpg') no-repeat center center/cover;
+    color: #fff;
     text-align: center;
-    color: var(--text-color);
+    padding: 100px 0;
+    position: relative;
 }
 
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #d60a23;
-}
-
-/* Sections */
-section {
-    padding: 6rem 0;
-}
-
-section:nth-child(even) {
-    background-color: var(--secondary-color);
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 3rem;
-}
-
-/* About Us Section */
-.about-us-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-}
-
-.about-us-text {
-    flex: 1;
-}
-
-.about-us-image {
-    flex: 1;
-    text-align: center;
-}
-
-.about-us-image img {
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* Donation Form */
-.donation-form form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.donation-form .full-width {
-    grid-column: 1 / -1;
-}
-
-.donation-form input,
-.donation-form select,
-.donation-form textarea {
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: var(--light-gray);
-    color: var(--dark-gray);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-/* Merch Section */
-.merch-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+.hero .container {
+    position: relative;
+    z-index: 1;
 }
 
-.merch-item {
+.hero h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+/* About Section */
+.about {
+    padding: 40px 0;
+    background: #fff;
+}
+
+/* Donation Form Section */
+.donation-section {
+    padding: 40px 0;
+}
+
+.donation-section iframe {
+    width: 100%;
+    min-height: 1000px;
+    border: none;
+}
+
+/* Memorial Tee Section */
+.memorial-tee {
+    background: url('../Turning Point USA_files/tee.jpg') no-repeat center center/cover;
+    padding: 60px 0;
+    color: white;
     text-align: center;
 }
 
-.merch-item {
-    background-color: var(--secondary-color);
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.memorial-tee .container {
+     background: rgba(0,0,0,0.6);
+     padding: 2rem;
+     border-radius: 10px;
 }
 
-.merch-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+.memorial-tee h2, .memorial-tee h3 {
+    color: white;
+}
+
+/* Other Ways to Give */
+.other-ways {
+    padding: 40px 0;
+    background: #fff;
+}
+
+.other-ways h2 {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .give-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.give-item {
+    gap: 20px;
     text-align: center;
 }
 
-.merch-item img {
-    border-radius: 10px;
-    margin-bottom: 1rem;
+.give-item img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Movements Section */
+.movements {
+    padding: 40px 0;
+}
+
+.movements h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Media Section */
+.media {
+     padding: 40px 0;
+     background: #fff;
+}
+.media h2 {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 /* Events Section */
-.events-slider {
+.events {
+    padding: 40px 0;
+}
+.events h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.event-slider {
     position: relative;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: auto;
     overflow: hidden;
-    border-radius: 10px;
+}
+
+.event-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .event-slide {
-    display: none;
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .event-slide img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
-.slider-controls {
+.slider-nav {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -280,212 +236,148 @@ section h2 {
     transform: translateY(-50%);
 }
 
-.slider-controls button {
-    background-color: rgba(0,0,0,0.5);
+.slider-nav button {
+    background: #c5143e;
     color: white;
     border: none;
-    padding: 1rem;
+    padding: 10px;
     cursor: pointer;
-    font-size: 1.5rem;
+}
+
+
+/* FAQ Section */
+.faq {
+    padding: 40px 0;
+    background: #fff;
+}
+.faq h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.faq-item {
+    margin-bottom: 10px;
+}
+.faq-question {
+    background: #eee;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
 }
 
 /* Contact Section */
-.contact-content {
-    display: flex;
-    gap: 3rem;
-    align-items: flex-start;
+.contact {
+    padding: 40px 0;
 }
-
-.contact-info {
-    flex-basis: 40%;
+.contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
 }
-
-.contact-icon {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.contact-icon i {
-    font-size: 2rem;
-    margin-right: 1rem;
-    color: var(--accent-color);
-}
-
 .contact-form {
-    flex-basis: 60%;
+    max-width: 600px;
+    margin: auto;
 }
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
+.form-group {
+    margin-bottom: 15px;
 }
-
-.contact-form input,
-.contact-form textarea {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border: 1px solid #ccc;
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.submit-btn {
+    width: 100%;
+    background: #c5143e;
+    color: #fff;
+    padding: 12px;
+    border: none;
     border-radius: 5px;
-    background-color: var(--light-gray);
-    color: var(--dark-gray);
-}
-
-/* FAQ Section */
-.faq-item {
-    margin-bottom: 1rem;
-}
-
-.faq-question {
-    background-color: var(--secondary-color);
-    padding: 1rem;
     cursor: pointer;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 16px;
 }
 
-.faq-question::after {
-    content: '+';
-    font-size: 1.5rem;
-}
-
-.faq-item.active .faq-question::after {
-    content: '-';
-}
-
-.faq-answer {
-    padding: 1rem;
-    display: none;
-    background-color: var(--dark-gray);
-    border-radius: 0 0 5px 5px;
-}
 
 /* Footer */
 footer {
-    background-color: var(--dark-gray);
-    color: var(--light-gray);
-    padding: 2rem 0;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .footer-section {
-    flex-basis: 22%;
-    margin-bottom: 1rem;
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
 }
 
 .footer-section h4 {
-    margin-bottom: 1rem;
+    color: #fff;
+    margin-bottom: 15px;
 }
 
-.social-links a {
-    margin-right: 10px;
-    font-size: 1.5rem;
-    color: var(--light-gray);
-    transition: color 0.3s ease;
+.footer-section ul {
+    list-style: none;
+    padding: 0;
 }
 
-.social-links a:hover {
-    color: var(--accent-color);
+.footer-section ul li a {
+    color: #ccc;
 }
 
-/* Payment Section */
-.payment-gateways {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
 }
 
-.gateway-placeholder {
-    background-color: var(--secondary-color);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    width: 200px;
-}
-
-.gateway-placeholder i {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-    .about-us-content {
-        flex-direction: column;
-    }
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .nav-links {
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    header nav {
         display: none;
-        flex-direction: column;
         width: 100%;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background-color: var(--secondary-color);
+        margin-top: 15px;
     }
 
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        text-align: center;
-        margin: 1rem 0;
-    }
-
-    .hamburger {
+    header nav.active {
         display: block;
     }
 
-    .hamburger.toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
+    header nav ul {
+        flex-direction: column;
     }
 
-    .hamburger.toggle .line2 {
-        opacity: 0;
+    header nav ul li {
+        margin: 10px 0;
+        text-align: center;
     }
 
-    .hamburger.toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
+    .hamburger {
+        display: flex;
     }
 
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-
-    section h2 {
-        font-size: 2rem;
-    }
-
-    .donation-form form {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-section {
-        flex-basis: 48%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .footer-section {
-        flex-basis: 100%;
+    .footer-content {
+        flex-direction: column;
     }
 }
