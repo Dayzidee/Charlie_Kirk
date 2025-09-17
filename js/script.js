@@ -1,132 +1,88 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const header = document.querySelector('header');
-const faqItems = document.querySelectorAll('.faq-item');
-const eventSlides = document.querySelectorAll('.event-slide');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
+document.addEventListener('DOMContentLoaded', function() {
 
-// Toggle hamburger menu
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('toggle');
-});
+    // --- Mobile Hamburger Menu ---
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('header nav');
 
-// Header scroll effect
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
     }
-});
 
-// FAQ Accordion
-faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    const answer = item.querySelector('.faq-answer');
+    // --- Event Slider ---
+    const slides = document.querySelector('.event-slides');
+    if (slides) {
+        const slide = document.querySelectorAll('.event-slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentIndex = 0;
+        const totalSlides = slide.length;
 
-    question.addEventListener('click', () => {
-        item.classList.toggle('active');
-        if (item.classList.contains('active')) {
-            answer.style.display = 'block';
-        } else {
-            answer.style.display = 'none';
+        function goToSlide(index) {
+            if (index < 0) {
+                index = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                index = 0;
+            }
+            slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+            currentIndex = index;
+        }
+
+        if(nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+            });
+        }
+
+        if(prevBtn){
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+            });
+        }
+    }
+
+    // --- FAQ Accordion ---
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        if (question && answer) {
+            question.addEventListener('click', () => {
+                const isVisible = answer.style.display === 'block';
+                // Close all answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                // Toggle current answer
+                if (!isVisible) {
+                    answer.style.display = 'block';
+                }
+            });
         }
     });
-});
 
-// Events Slider
-let slideIndex = 0;
-let slideInterval;
+    // --- Contact Form Submission ---
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
 
-const showSlides = (n) => {
-    slideIndex = n;
-    if (slideIndex >= eventSlides.length) {
-        slideIndex = 0;
+            // Placeholder for submission logic
+            console.log('Form Submitted:');
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+
+            alert('Thank you for your message, ' + name + '! We will get back to you shortly.');
+
+            this.reset();
+        });
     }
-    if (slideIndex < 0) {
-        slideIndex = eventSlides.length - 1;
-    }
 
-    eventSlides.forEach(slide => slide.style.display = 'none');
-    eventSlides[slideIndex].style.display = 'block';
-}
-
-const nextSlide = () => {
-    showSlides(slideIndex + 1);
-}
-
-const prevSlide = () => {
-    showSlides(slideIndex - 1);
-}
-
-const startSlider = () => {
-    slideInterval = setInterval(nextSlide, 3000);
-}
-
-const stopSlider = () => {
-    clearInterval(slideInterval);
-}
-
-nextBtn.addEventListener('click', () => {
-    stopSlider();
-    nextSlide();
-    startSlider();
 });
-
-prevBtn.addEventListener('click', () => {
-    stopSlider();
-    prevSlide();
-    startSlider();
-});
-
-showSlides(slideIndex);
-startSlider();
-
-// Donation Form Validation
-const donationForm = document.querySelector('#donation-form form');
-
-if (donationForm) {
-    donationForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const firstName = donationForm.querySelector('input[placeholder="First Name"]');
-        const lastName = donationForm.querySelector('input[placeholder="Last Name"]');
-        const email = donationForm.querySelector('input[placeholder="Email Address"]');
-        const amount = donationForm.querySelector('select');
-        const customAmount = donationForm.querySelector('input[placeholder="Custom Amount"]');
-
-        let isValid = true;
-
-        if (firstName.value.trim() === '') {
-            alert('Please enter your first name.');
-            isValid = false;
-        }
-
-        if (lastName.value.trim() === '') {
-            alert('Please enter your last name.');
-            isValid = false;
-        }
-
-        if (email.value.trim() === '' || !/^\S+@\S+\.\S+$/.test(email.value)) {
-            alert('Please enter a valid email address.');
-            isValid = false;
-        }
-
-        if (amount.value === '') {
-            alert('Please select a donation amount.');
-            isValid = false;
-        }
-
-        if (amount.value === 'other' && customAmount.value.trim() === '') {
-            alert('Please enter a custom donation amount.');
-            isValid = false;
-        }
-
-        if (isValid) {
-            alert('Thank you for your donation!');
-            donationForm.reset();
-        }
-    });
-}
