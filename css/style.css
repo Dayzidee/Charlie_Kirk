@@ -556,6 +556,7 @@ section::before {
     animation: fadeInUp 1s ease-out;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .stat-item::before {
@@ -1586,7 +1587,7 @@ footer::before {
         flex-wrap: wrap;
     }
 
-    header nav {
+    .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
