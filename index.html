@@ -1,301 +1,932 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Charity Foundation</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charlie Kirk Foundation - Defending America's Future</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Particle Background -->
+    <div id="particles"></div>
+
     <header>
-        <nav class="container">
-            <a href="#" class="logo"><img src="assets/logo-white.png" alt="Test Charity Foundation Logo"></a>
-            <ul class="nav-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#merch">Merch</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
+      <nav class="container">
+        <div class="logo">
+          <i class="fas fa-flag-usa"></i>
+          Charlie Kirk Foundation
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#missions">Our Missions</a></li>
+          <li><a href="#movements">Movements</a></li>
+          <li><a href="#donate">Donate</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#volunteer">Volunteer</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>CHARLIE’S VISION. AMERICA’S FUTURE. THE FIGHT CONTINUES.</h1>
-                <p>Join us in honoring the legacy of Charlie Kirk and continuing the fight for freedom.</p>
-                <a href="#donation-form" class="btn">Donate Now</a>
-            </div>
-        </section>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>CHARLIE'S VISION. AMERICA'S FUTURE.</h1>
+          <p>Defending Freedom, Faith, and the American Dream</p>
+          <a href="#donate" class="btn hero-btn">
+            <i class="fas fa-hand-holding-heart"></i>
+            Join The Fight
+          </a>
+        </div>
+      </section>
 
-        <section id="about">
-            <div class="container about-us-content">
-                <div class="about-us-text">
-                    <h2>THE FIGHT CONTINUES.</h2>
-                    <p>Charlie Kirk poured his life into building a movement rooted in faith, freedom, and love of country. He believed America’s future depended on raising up a generation who would NEVER SURRENDER.</p>
-                    <p>That vision is alive and stronger than ever. Prayers are rising, support is pouring in, millions of students are rallying, volunteers are flooding in, and vigils are filling churches and schools across the nation. The fire Charlie lit is burning brighter than ever.</p>
-                    <p>Now the responsibility is ours. We will honor his legacy by pressing forward—not slowing down, not surrendering. This is not a time to preserve what was built. This is the time to fight harder, grow faster, and unleash the true power of the grassroots machine Charlie created.</p>
-                     <p>We will make Charlie proud. We will defend America’s future. And we will not stop until freedom prevails.</p>
-                </div>
-                <div class="about-us-image">
-                    <img src="assets/about-us-image.jpg" alt="About Us Image">
-                </div>
-            </div>
-        </section>
+      <!-- About Section -->
+      <section id="about">
+        <div class="container">
+          <div class="section-header">
+            <h2>THE FIGHT CONTINUES</h2>
+            <p>
+              Honoring Charlie Kirk's legacy while building America's future
+            </p>
+          </div>
+          <div class="about-content">
+            <div class="about-text">
+              <h3>Our Legacy of Leadership</h3>
+              <p>
+                Charlie Kirk poured his life into building a movement rooted in
+                faith, freedom, and unwavering love of country. He believed
+                America's future depended on raising up a generation who would
+                NEVER SURRENDER to the forces seeking to destroy our
+                constitutional republic. His vision transcended political
+                boundaries, focusing on fundamental American values that have
+                made our nation the beacon of hope for millions worldwide.
+              </p>
 
-        <section id="events">
-            <div class="container">
-                <h2>Events, Media, and Movements</h2>
-                <div class="events-slider">
-                    <div class="event-slide" style="display: block;">
-                        <img src="assets/event-1.jpg" alt="Event 1">
-                    </div>
-                    <div class="event-slide">
-                        <img src="assets/event-2.jpg" alt="Event 2">
-                    </div>
-                    <div class="event-slide">
-                        <img src="assets/event-3.jpg" alt="Event 3">
-                    </div>
-                    <div class="slider-controls">
-                        <button id="prevBtn">&lt;</button>
-                        <button id="nextBtn">&gt;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+              <p>
+                That revolutionary vision is alive and stronger than ever.
+                Prayers are rising from sea to shining sea, grassroots support
+                is pouring in from every corner of America, millions of students
+                are rallying on college campuses, dedicated volunteers are
+                flooding our offices, and patriotic vigils are filling churches
+                and schools across this great nation. The fire Charlie lit is
+                burning brighter than ever before, illuminating the path forward
+                for conservative Americans who refuse to back down.
+              </p>
 
-        <section id="donation-form">
-            <div class="container">
-                <h2>Support the Fight</h2>
-                <form>
-                    <input type="text" placeholder="First Name" required>
-                    <input type="text" placeholder="Last Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <input type="tel" placeholder="Phone Number">
+              <p>
+                Now the sacred responsibility falls to us. We will honor his
+                extraordinary legacy by pressing forward with unprecedented
+                determination—not slowing down, not retreating, never
+                surrendering. This is not merely a time to preserve what was
+                built in the past. This is our moment to fight harder than ever
+                before, grow faster than our opponents, and unleash the true
+                power of the grassroots machine Charlie created with his blood,
+                sweat, and tears.
+              </p>
+
+              <p>
+                We will make Charlie proud through every victory we achieve. We
+                will defend America's future with the same passion he showed
+                every single day. And we will not stop, we will not rest, we
+                will not yield until freedom prevails and the American dream is
+                secured for generations to come. The Charlie Kirk Foundation
+                stands as a testament to one man's vision and America's enduring
+                promise.
+              </p>
+            </div>
+            <div class="about-image">
+              <div class="image-placeholder">
+                <i class="fas fa-flag-usa"></i>
+                <p>Charlie Kirk Legacy Photo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Statistics -->
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number" data-target="2500000">0</span>
+              <span class="stat-label">Students Reached</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="50000">0</span>
+              <span class="stat-label">Active Volunteers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="1000">0</span>
+              <span class="stat-label">Campus Chapters</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="500">0</span>
+              <span class="stat-label">Events Hosted</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Missions Section -->
+      <section id="missions">
+        <div class="container">
+          <div class="section-header">
+            <h2>OUR SACRED MISSIONS</h2>
+            <p>Defending the principles that make America exceptional</p>
+          </div>
+          <div class="missions-grid">
+            <div class="mission-card">
+              <i class="fas fa-scales-justice mission-icon"></i>
+              <h3>Justice & Legal Reform</h3>
+              <p>
+                We champion constitutional justice and work tirelessly to reform
+                our legal system to ensure equal treatment under the law. Our
+                mission includes supporting judges who interpret the
+                Constitution as written, advocating for criminal justice reform
+                that protects both victims and defendants, and fighting against
+                activist judges who legislate from the bench. We believe in a
+                justice system that serves all Americans fairly, regardless of
+                political affiliation, race, or economic status.
+              </p>
+            </div>
+            <div class="mission-card">
+              <i class="fas fa-heart mission-icon"></i>
+              <h3>Human Rights Advocacy</h3>
+              <p>
+                From the moment of conception to natural death, we defend the
+                fundamental human right to life. Our human rights mission
+                extends to protecting religious freedom, defending free speech
+                on college campuses, and ensuring that every American citizen
+                can exercise their constitutional rights without fear of
+                persecution or cancellation. We stand with the persecuted,
+                defend the voiceless, and fight for those who cannot fight for
+                themselves in our modern society.
+              </p>
+            </div>
+            <div class="mission-card">
+              <i class="fas fa-graduation-cap mission-icon"></i>
+              <h3>Educational Freedom</h3>
+              <p>
+                We combat the radical indoctrination happening in our schools
+                and universities by promoting educational choice, supporting
+                school voucher programs, and empowering parents to take control
+                of their children's education. Our mission includes exposing
+                critical race theory, gender ideology, and other harmful
+                curricula that divide our children and undermine American
+                values. Education should enlighten minds, not indoctrinate them
+                with political propaganda.
+              </p>
+            </div>
+            <div class="mission-card">
+              <i class="fas fa-flag-usa mission-icon"></i>
+              <h3>Constitutional Conservatism</h3>
+              <p>
+                We educate Americans about our founding documents and the
+                timeless principles they contain. Our constitutional mission
+                involves teaching the next generation about limited government,
+                individual liberty, free markets, and the rule of law. We work
+                to ensure that every American understands their rights and
+                responsibilities as citizens of this great republic, and we
+                fight against those who would fundamentally transform our
+                constitutional system.
+              </p>
+            </div>
+            <div class="mission-card">
+              <i class="fas fa-cross mission-icon"></i>
+              <h3>Faith & Religious Liberty</h3>
+              <p>
+                America was founded on Judeo-Christian principles, and we defend
+                the right of all Americans to practice their faith freely. Our
+                religious liberty mission includes protecting churches from
+                government overreach, defending Christian business owners from
+                discrimination, and ensuring that faith-based organizations can
+                operate according to their deeply held beliefs. We believe that
+                religious freedom is not just freedom of worship, but freedom to
+                live according to one's faith in all aspects of life.
+              </p>
+            </div>
+            <div class="mission-card">
+              <i class="fas fa-users mission-icon"></i>
+              <h3>Community Empowerment</h3>
+              <p>
+                We believe in empowering local communities to solve their own
+                problems rather than relying on big government solutions. Our
+                community mission involves supporting local businesses,
+                promoting volunteerism, and encouraging Americans to take
+                personal responsibility for their neighborhoods and families. We
+                work to strengthen the social fabric that holds our communities
+                together and makes America the land of opportunity for all who
+                are willing to work hard and pursue their dreams.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Movements Section -->
+      <section id="movements">
+        <div class="container">
+          <div class="section-header">
+            <h2>POWERFUL MOVEMENTS</h2>
+            <p>Leading the charge for conservative principles across America</p>
+          </div>
+          <div class="movements-content">
+            <div class="movement-item">
+              <div class="movement-header">
+                <i class="fas fa-university"></i>
+                <h3>Campus Revolution</h3>
+              </div>
+              <p>
+                Our campus movement is transforming higher education across
+                America by establishing conservative student organizations,
+                hosting debates with liberal professors, and providing resources
+                for students facing discrimination. We've created safe spaces
+                for conservative thought on over 1,000 college campuses, trained
+                thousands of student leaders, and successfully challenged
+                unconstitutional speech codes. Through our campus revolution,
+                we're ensuring that the next generation of leaders understands
+                and appreciates the principles that made America great.
+              </p>
+            </div>
+            <div class="movement-item">
+              <div class="movement-header">
+                <i class="fas fa-vote-yea"></i>
+                <h3>Voter Education Initiative</h3>
+              </div>
+              <p>
+                We're leading the largest conservative voter education and
+                registration drive in American history. Our movement focuses on
+                educating citizens about the issues that matter most,
+                registering new conservative voters, and ensuring election
+                integrity across all 50 states. We provide comprehensive voter
+                guides, host candidate forums, and work with local election
+                officials to ensure that every legal vote counts and that our
+                democratic process remains secure and transparent.
+              </p>
+            </div>
+            <div class="movement-item">
+              <div class="movement-header">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Grassroots Activism</h3>
+              </div>
+              <p>
+                From town halls to state capitols, our grassroots movement is
+                mobilizing ordinary Americans to become extraordinary advocates
+                for freedom. We provide training, resources, and support for
+                citizens who want to make a difference in their communities. Our
+                activists are fighting against mask mandates, school board
+                overreach, and unconstitutional government policies at every
+                level. We believe that change happens from the ground up, not
+                from Washington down.
+              </p>
+            </div>
+            <div class="movement-item">
+              <div class="movement-header">
+                <i class="fas fa-podcast"></i>
+                <h3>Media & Communications</h3>
+              </div>
+              <p>
+                In an era of fake news and media bias, we're creating our own
+                communication channels to reach millions of Americans with the
+                truth. Our media movement includes podcasts, social media
+                campaigns, documentaries, and live events that bypass the
+                mainstream media filter. We're training the next generation of
+                conservative commentators, journalists, and content creators who
+                will shape the narrative for decades to come.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Donation Section -->
+      <section id="donate" class="donation-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>SUPPORT THE FIGHT</h2>
+            <p>Your contribution fuels the movement for America's future</p>
+          </div>
+          <div class="donation-container">
+            <div class="donation-form">
+              <h3>Make a Donation</h3>
+              <form id="donation-form">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label>First Name</label>
+                    <input
+                      type="text"
+                      placeholder="Enter first name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Enter last name" required />
+                  </div>
+                  <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter email" required />
+                  </div>
+                  <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="Enter phone" />
+                  </div>
+                  <div class="form-group">
+                    <label>Donation Amount</label>
                     <select required>
-                        <option value="">Select Donation Amount</option>
-                        <option value="25">$25</option>
-                        <option value="50">$50</option>
-                        <option value="100">$100</option>
-                        <option value="250">$250</option>
-                        <option value="other">Other</option>
+                      <option value="">Select Amount</option>
+                      <option value="25">$25</option>
+                      <option value="50">$50</option>
+                      <option value="100">$100</option>
+                      <option value="250">$250</option>
+                      <option value="500">$500</option>
+                      <option value="1000">$1000</option>
+                      <option value="other">Custom Amount</option>
                     </select>
-                    <input type="text" placeholder="Custom Amount">
-                    <textarea placeholder="Comments" class="full-width"></textarea>
-                    <button type="submit" class="btn full-width">Donate</button>
-                </form>
+                  </div>
+                  <div class="form-group">
+                    <label>Custom Amount</label>
+                    <input type="number" placeholder="Enter amount" />
+                  </div>
+                  <div class="form-group full-width">
+                    <label>Message (Optional)</label>
+                    <textarea
+                      placeholder="Your message to support the cause"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn full-width">
+                  <i class="fas fa-heart"></i>
+                  Donate Now
+                </button>
+              </form>
             </div>
-        </section>
 
-        <section id="merch">
-            <div class="container">
-                <h2>Our Merch</h2>
-                <div class="merch-grid">
-                    <div class="merch-item">
-                        <img src="assets/merch-1.jpg" alt="Merch Item 1">
-                        <h3>CHARLIE KIRK SEND ME TEE</h3>
-                        <p>IN LOVING MEMORY OF OUR FOUNDER & CEO CHARLIE KIRK</p>
-                        <a href="#" class="btn">BUY HERE</a>
-                    </div>
+            <!-- Crypto Donations -->
+            <div class="crypto-donations">
+              <h3>Cryptocurrency Donations</h3>
+              <p>Support our mission with digital currency donations</p>
+              <div class="crypto-grid">
+                <div class="crypto-item" onclick="copyToClipboard('bitcoin')">
+                  <div class="crypto-header">
+                    <i class="fab fa-bitcoin crypto-icon"></i>
+                    <span class="crypto-name">Bitcoin (BTC)</span>
+                  </div>
+                  <div class="crypto-address" id="bitcoin">
+                    3HwWtqUiZErkFYCvSj75bVrVFsjC95RJKU
+                  </div>
+                  <small>Click to copy address</small>
                 </div>
+                <div class="crypto-item" onclick="copyToClipboard('ethereum')">
+                  <div class="crypto-header">
+                    <i class="fab fa-ethereum crypto-icon"></i>
+                    <span class="crypto-name">Ethereum (ETH)</span>
+                  </div>
+                  <div class="crypto-address" id="ethereum">
+                    0xB5bc64fCA65767660964D01E4Ae07a4d534699Ad
+                  </div>
+                  <small>Click to copy address</small>
+                </div>
+                <div class="crypto-item" onclick="copyToClipboard('solana')">
+                  <div class="crypto-header">
+                    <i class="fas fa-coins crypto-icon"></i>
+                    <span class="crypto-name">Solana (SOL)</span>
+                  </div>
+                  <div class="crypto-address" id="solana">
+                    6hGQxzMQ9xjGqEhgE8CC9WPBz8QxyR4WNiX6EJerX97W
+                  </div>
+                  <small>Click to copy address</small>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section id="other-ways-to-give">
-            <div class="container">
-                <h2>Other Ways to Give</h2>
-                <div class="give-grid">
-                    <div class="give-item">
-                        <img src="assets/mail-check.png" alt="Mail Check">
-                        <h4>Mail Check</h4>
-                        <p><strong><em>Turning Point USA</em></strong><br><em>4940 East Beverly Road<br>Phoenix, Arizona 85044</em></p>
-                        <a href="#" class="btn">CONTACT US</a>
-                    </div>
-                    <div class="give-item">
-                        <img src="assets/stocks-bonds.png" alt="Stocks and Bonds">
-                        <h4>Gifts of Stocks, Bonds, & Other Securities</h4>
-                        <p>Turning Point USA accepts gifts of stocks, bonds, and other securities. To make this type of gift, please contact us at Donate@TPUSA.com.</p>
-                        <a href="#" class="btn">Learn more</a>
-                    </div>
-                    <div class="give-item">
-                        <img src="assets/legacy-giving.png" alt="Legacy Giving">
-                        <h4>Legacy Giving</h4>
-                        <p>If you are interested in including Turning Point USA in your will, life insurance, or other estate planning options, please email donate@tpusa.com.</p>
-                        <a href="#" class="btn">CONTACT US</a>
-                    </div>
-                    <div class="give-item">
-                        <img src="assets/crypto.png" alt="Cryptocurrency">
-                        <h4>Cryptocurrency</h4>
-                        <p>Donating cryptocurrency is a non-taxable event, meaning you do not owe capital gains tax on the appreciated amount and can deduct it on your taxes. Turning Point USA accepts Bitcoin and Bitcoin Cash.</p>
-                        <a href="#" class="btn">Learn more</a>
-                    </div>
-                    <div class="give-item">
-                        <img src="assets/eft.png" alt="Electronic Fund Transfer">
-                        <h4>ELECTRONIC FUND TRANSFER</h4>
-                        <p>Donations made via electronic fund transfers (EFT) to Turning Point USA—typically in the form of a wire or ACH—are easy, secure, and fast.</p>
-                        <a href="#" class="btn">Learn more</a>
-                    </div>
-                    <div class="give-item">
-                        <img src="assets/phone-icon.png" alt="Donate by Phone">
-                        <h4>DONATE BY PHONE</h4>
-                        <p>Donations can be made by phone at<br>(844) 872-1776.</p>
-                        <a href="#" class="btn">CALL US</a>
-                    </div>
-                    <div class="give-item">
-                        <img src="assets/qcd-from-ira.png" alt="QCD from IRA">
-                        <h4>QCD FROM IRA</h4>
-                        <p>If you are 70½ or older, you may be able to lower the taxes from your IRA's required minimum distribution by making a donation from your IRA to Turning Point USA.</p>
-                        <a href="#" class="btn">Learn more</a>
-                    </div>
-                    <div class="give-item">
-                        <img src="assets/donate-vehicle.png" alt="Donate a Vehicle">
-                        <h4>DONATE A VEHICLE</h4>
-                        <p>Donate your vehicle to Turning Point USA by clicking on the link below.</p>
-                        <a href="#" class="btn">DONATE HERE</a>
-                    </div>
-                    <div class="give-item">
-                        <img src="assets/in-kind-gifts.png" alt="In-Kind Gifts">
-                        <h4>In-Kind Gifts</h4>
-                        <p>Turning Point USA accepts in-kind donations in the form of any product, service, or other non-cash item of monetary value.</p>
-                        <a href="#" class="btn">Learn more</a>
-                    </div>
-                </div>
+          <!-- Other Ways to Give -->
+          <div class="other-giving">
+            <h3>Other Ways to Support</h3>
+            <div class="giving-options">
+              <div class="giving-option">
+                <i class="fas fa-envelope"></i>
+                <h4>Mail Check</h4>
+                <p>
+                  Charlie Kirk Foundation<br />4940 East Beverly Road<br />Phoenix,
+                  Arizona 85044
+                </p>
+              </div>
+              <div class="giving-option">
+                <i class="fas fa-phone"></i>
+                <h4>Donate by Phone</h4>
+                <p>Call us at<br />(844) 872-1776</p>
+              </div>
+              <div class="giving-option">
+                <i class="fas fa-car"></i>
+                <h4>Vehicle Donation</h4>
+                <p>
+                  Donate your car, truck, or motorcycle to support our cause
+                </p>
+              </div>
+              <div class="giving-option">
+                <i class="fas fa-gift"></i>
+                <h4>Legacy Giving</h4>
+                <p>Include us in your will or estate planning</p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="faq">
-            <div class="container">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How can I get involved?
-                    </div>
-                    <div class="faq-answer">
-                        <p>You can get involved by donating, volunteering, or attending our events. Visit the "Get Involved" section for more details.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Is my donation tax-deductible?
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, all donations to the Test Charity Foundation are tax-deductible to the extent allowed by law.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Where can I buy official merchandise?
-                    </div>
-                    <div class="faq-answer">
-                        <p>You can purchase official merchandise from our online store. Visit the "Merch" section to browse our products.</p>
-                    </div>
-                </div>
+      <!-- Gallery Section -->
+      <section id="gallery">
+        <div class="container">
+          <div class="section-header">
+            <h2>MOVEMENT GALLERY</h2>
+            <p>Capturing moments from our fight for America</p>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <div class="gallery-overlay">
+                <i class="fas fa-users"></i>
+                <p>Campus Events</p>
+              </div>
             </div>
-        </section>
+            <div class="gallery-item">
+              <div class="gallery-overlay">
+                <i class="fas fa-microphone"></i>
+                <p>Speaking Engagements</p>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-overlay">
+                <i class="fas fa-flag-usa"></i>
+                <p>Patriotic Rallies</p>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-overlay">
+                <i class="fas fa-graduation-cap"></i>
+                <p>Student Leadership</p>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-overlay">
+                <i class="fas fa-handshake"></i>
+                <p>Community Outreach</p>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-overlay">
+                <i class="fas fa-heart"></i>
+                <p>Volunteer Activities</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="terms">
-            <div class="container">
-                <h2>Terms of Service</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+      <!-- Impact Stories Section -->
+      <section id="impact">
+        <div class="container">
+          <div class="section-header">
+            <h2>IMPACT STORIES</h2>
+            <p>Real stories from Americans whose lives we've changed</p>
+          </div>
+          <div class="stories-grid">
+            <div class="story-card">
+              <div class="story-header">
+                <i class="fas fa-quote-left"></i>
+                <h4>Student Activist - Sarah M.</h4>
+              </div>
+              <p>
+                "The Charlie Kirk Foundation gave me the courage to stand up for
+                my conservative values on campus. Through their training and
+                support, I started a successful chapter at my university and now
+                lead debates with over 500 students attending. I learned that
+                being conservative doesn't mean being silent – it means being
+                smart, prepared, and fearless in defending the truth."
+              </p>
             </div>
-        </section>
+            <div class="story-card">
+              <div class="story-header">
+                <i class="fas fa-quote-left"></i>
+                <h4>Parent Advocate - Michael R.</h4>
+              </div>
+              <p>
+                "When my local school board tried to implement radical
+                curriculum, I felt powerless as a parent. The Foundation's
+                grassroots training program taught me how to research issues,
+                speak at public meetings, and organize other concerned parents.
+                Together, we successfully changed our school board and restored
+                common-sense education policies that put our children first."
+              </p>
+            </div>
+            <div class="story-card">
+              <div class="story-header">
+                <i class="fas fa-quote-left"></i>
+                <h4>Young Professional - David L.</h4>
+              </div>
+              <p>
+                "As a young conservative in a liberal city, I thought I was
+                alone until I found this community. The Foundation's mentorship
+                program connected me with like-minded professionals and taught
+                me how to advance conservative principles in my workplace and
+                community. Now I'm running for city council and leading the
+                charge for fiscal responsibility in local government."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="payment">
-            <div class="container">
-                <h2>Payment Gateways</h2>
-                <div class="payment-gateways">
-                    <div class="gateway-placeholder">
-                        <i class="fab fa-paypal"></i>
-                        <p>PayPal</p>
-                    </div>
-                    <div class="gateway-placeholder">
-                        <i class="fab fa-stripe"></i>
-                        <p>Stripe</p>
-                    </div>
-                    <div class="gateway-placeholder">
-                        <i class="fas fa-credit-card"></i>
-                        <p>Credit Card</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Volunteer Section -->
+      <section id="volunteer">
+        <div class="container">
+          <div class="section-header">
+            <h2>JOIN THE VOLUNTEER ARMY</h2>
+            <p>Be part of the movement that's changing America</p>
+          </div>
+          <div class="volunteer-content">
+            <div class="volunteer-info">
+              <h3>Why Volunteer With Us?</h3>
+              <p>
+                Volunteering with the Charlie Kirk Foundation means joining a
+                nationwide network of patriots who are actively working to
+                preserve American values and freedoms. Our volunteers are the
+                backbone of our movement, serving in various capacities from
+                campus organizing to event coordination, from social media
+                advocacy to grassroots lobbying efforts.
+              </p>
 
-        <section id="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>4940 East Beverly Road<br>Phoenix, Arizona 85044</p>
-                        </div>
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                            <p>donate@tpusa.com</p>
-                        </div>
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                            <p>(844) 872-1776</p>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <form>
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Your Email" required>
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                            <button type="submit" class="btn">Send Message</button>
-                        </form>
-                    </div>
-                </div>
+              <p>
+                Whether you have two hours a week or twenty, whether you're a
+                college student or a retiree, there's a place for you in our
+                volunteer army. We provide comprehensive training, ongoing
+                support, and the resources you need to make a real difference in
+                your community and beyond.
+              </p>
+
+              <div class="volunteer-benefits">
+                <h4>Volunteer Benefits:</h4>
+                <ul>
+                  <li>
+                    <i class="fas fa-check"></i> Exclusive training sessions
+                    with conservative leaders
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Networking opportunities with
+                    like-minded patriots
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Access to special events and
+                    VIP experiences
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Leadership development programs
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Direct impact on conservative
+                    causes
+                  </li>
+                </ul>
+              </div>
             </div>
-        </section>
+            <div class="volunteer-roles">
+              <h3>Volunteer Opportunities</h3>
+              <div class="roles-grid">
+                <div class="role-card">
+                  <i class="fas fa-bullhorn"></i>
+                  <h4>Campus Organizer</h4>
+                  <p>
+                    Lead conservative student groups and organize events on
+                    college campuses
+                  </p>
+                </div>
+                <div class="role-card">
+                  <i class="fas fa-calendar"></i>
+                  <h4>Event Coordinator</h4>
+                  <p>
+                    Help plan and execute rallies, conferences, and community
+                    events
+                  </p>
+                </div>
+                <div class="role-card">
+                  <i class="fas fa-share-alt"></i>
+                  <h4>Digital Activist</h4>
+                  <p>
+                    Spread our message through social media and online advocacy
+                  </p>
+                </div>
+                <div class="role-card">
+                  <i class="fas fa-phone"></i>
+                  <h4>Phone Bank Volunteer</h4>
+                  <p>
+                    Contact voters and supporters to mobilize conservative
+                    action
+                  </p>
+                </div>
+                <div class="role-card">
+                  <i class="fas fa-clipboard-list"></i>
+                  <h4>Research Assistant</h4>
+                  <p>
+                    Help investigate policy issues and prepare briefing
+                    materials
+                  </p>
+                </div>
+                <div class="role-card">
+                  <i class="fas fa-hands-helping"></i>
+                  <h4>Community Liaison</h4>
+                  <p>
+                    Build relationships with local organizations and community
+                    leaders
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="volunteer-form">
+            <h3>Sign Up to Volunteer</h3>
+            <form id="volunteer-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" placeholder="Enter your name" required />
+                </div>
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input type="email" placeholder="Enter your email" required />
+                </div>
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" placeholder="Enter your phone" />
+                </div>
+                <div class="form-group">
+                  <label>State</label>
+                  <select required>
+                    <option value="">Select your state</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <!-- Add more states as needed -->
+                  </select>
+                </div>
+                <div class="form-group full-width">
+                  <label>Areas of Interest</label>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="campus" /> Campus Organizing
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="events" /> Event Planning
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="digital" /> Digital Activism
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="phone" /> Phone Banking
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn full-width">
+                <i class="fas fa-user-plus"></i>
+                Join Our Team
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq">
+        <div class="container">
+          <div class="section-header">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <p>Get answers to common questions about our mission</p>
+          </div>
+          <div class="faq-container">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How can I get involved in the movement?</span>
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  There are many ways to get involved! You can volunteer for
+                  events, start a chapter on your campus, donate to support our
+                  mission, attend our rallies and conferences, or simply share
+                  our message with friends and family. Visit our volunteer
+                  section to learn more about specific opportunities.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Are donations tax-deductible?</span>
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, all donations to the Charlie Kirk Foundation are
+                  tax-deductible to the extent allowed by law. You will receive
+                  a receipt for your contribution that you can use for tax
+                  purposes.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do you use donation funds?</span>
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Your donations directly support our mission through campus
+                  organizing, event hosting, educational materials, volunteer
+                  training, digital outreach, and administrative costs. We
+                  maintain transparency in our financial operations and ensure
+                  maximum impact for every dollar contributed.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can I start a chapter at my school?</span>
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Absolutely! We encourage students to start chapters at their
+                  schools. We provide comprehensive support including training
+                  materials, event planning assistance, funding opportunities,
+                  and ongoing mentorship from experienced organizers.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Do you accept cryptocurrency donations?</span>
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, we accept Bitcoin, Ethereum, and Solana donations.
+                  Cryptocurrency donations are often more tax-efficient and help
+                  us reach supporters who prefer digital payment methods. You
+                  can find our wallet addresses in the donation section.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2>CONTACT US</h2>
+            <p>Get in touch with our team</p>
+          </div>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Address</h4>
+                  <p>
+                    Charlie Kirk Foundation<br />4940 East Beverly Road<br />Phoenix,
+                    Arizona 85044
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>info@charliekirkfoundation.org</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <p>(844) 872-1776</p>
+                </div>
+              </div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+              </div>
+            </div>
+            <div class="contact-form">
+              <form id="contact-form">
+                <div class="form-group">
+                  <label>Your Name</label>
+                  <input type="text" placeholder="Enter your name" required />
+                </div>
+                <div class="form-group">
+                  <label>Your Email</label>
+                  <input type="email" placeholder="Enter your email" required />
+                </div>
+                <div class="form-group">
+                  <label>Subject</label>
+                  <input type="text" placeholder="Enter subject" required />
+                </div>
+                <div class="form-group">
+                  <label>Your Message</label>
+                  <textarea
+                    placeholder="Enter your message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn">
+                  <i class="fas fa-paper-plane"></i>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="assets/logo-white.png" alt="Test Charity Foundation Logo" class="footer-logo">
-                    <p>Continuing the fight for faith, freedom, and love of country.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#merch">Merch</a></li>
-                        <li><a href="#events">Events</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#terms">Terms of Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <i class="fas fa-flag-usa"></i>
+              <span>Charlie Kirk Foundation</span>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Test Charity Foundation. All Rights Reserved.</p>
+            <p>
+              Continuing the fight for faith, freedom, and love of country.
+              Defending the American dream for future generations.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#missions">Our Missions</a></li>
+              <li><a href="#movements">Movements</a></li>
+              <li><a href="#volunteer">Volunteer</a></li>
+              <li><a href="#donate">Donate</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Get Involved</h4>
+            <ul>
+              <li><a href="#volunteer">Join Our Team</a></li>
+              <li><a href="#gallery">View Gallery</a></li>
+              <li><a href="#impact">Impact Stories</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Our Movement</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
             </div>
+            <div class="newsletter">
+              <h5>Newsletter</h5>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Your email" />
+                <button type="button">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; 2025 Charlie Kirk Foundation. All Rights Reserved.</p>
+          </div>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Disclaimer</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
