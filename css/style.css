@@ -1,5 +1,6 @@
-/* Basic Reset */
-* {
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -89,9 +90,8 @@ header {
     backdrop-filter: blur(10px);
     padding: 1rem 0;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
+    top: 0;
     z-index: 1000;
     transition: all 0.3s ease;
     border-bottom: 3px solid var(--primary-red);
@@ -137,8 +137,10 @@ nav {
     transform: scale(1.05);
 }
 
-.nav-links {
+header nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
 }
 
@@ -185,7 +187,7 @@ nav {
     flex-direction: column;
 }
 
-.hamburger div {
+.hamburger .bar {
     width: 25px;
     height: 3px;
     background: var(--pure-white);
@@ -1246,7 +1248,6 @@ section::before {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
-
 .faq-question {
     background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem 2rem;
@@ -1274,7 +1275,6 @@ section::before {
 .faq-item.active .faq-question i {
     transform: rotate(45deg);
 }
-
 .faq-answer {
     padding: 0 2rem;
     max-height: 0;
@@ -1582,7 +1582,11 @@ footer::before {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    header nav {
         display: none;
         flex-direction: column;
         position: absolute;
