@@ -18,14 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
 // Hamburger Menu Toggle
 hamburger?.addEventListener("click", () => {
   navLinks.classList.toggle("active");
-  hamburger.classList.toggle("toggle");
+  hamburger.classList.toggle("fa-bars");
+  hamburger.classList.toggle("fa-times");
 });
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
-    hamburger.classList.remove("toggle");
+    hamburger.classList.add("fa-bars");
+    hamburger.classList.remove("fa-times");
   });
 });
 
@@ -163,6 +165,14 @@ function initializeCounters() {
   });
 }
 
+function formatCounterNumber(num) {
+  if (num >= 1000000) {
+    const millions = num / 1000000;
+    return parseFloat(millions.toFixed(1)) + 'M';
+  }
+  return Math.floor(num).toLocaleString();
+}
+
 function animateCounter(element) {
   const target = parseInt(element.getAttribute("data-target"));
   const duration = 2000; // 2 seconds
@@ -176,7 +186,7 @@ function animateCounter(element) {
       clearInterval(timer);
     }
 
-    element.textContent = Math.floor(current).toLocaleString();
+    element.textContent = formatCounterNumber(current);
   }, 16);
 }
 
